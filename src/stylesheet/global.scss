@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;500;800&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root {
+    --main-bg-color: #ebebeb;
+    --secondary-bg-color: #e0e0e0;
+    --logo-color: #646af6;
+    --font-bold-color: #2c5197;
+    --font-color: #a2a2a2;
+    --button-color: #2882d8;
+    --pad-md: 10px;
+}
+
+.wrapper {
+    margin: 50px auto;
+    max-width: 1100px;
+}
+
+// ----------- NAVBAR ----------- //
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__item {
+        color: var(--font-color);
+        padding: 5px 30px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        &--active,
+        &:hover {
+            color: var(--font-bold-color);
+        }
+    }
+
+    .button {
+        color: var(--button-color);
+        border: 2px solid var(--button-color);
+        border-radius: 25px;
+        margin-left: 12.5px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        color: var(--logo-color);
+    }
+}
+
+// --------------- LANDING --------------- //
+
+.landing-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
+
+.landing-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    &__header {
+        font-size: 4rem;
+        color: var(--logo-color);
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        color: var(--font-color);
+    }
+}
+
+.landing-image {
+    float: right;
+    svg {
+        width: 600px;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+}
