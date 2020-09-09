@@ -8,6 +8,9 @@ function LandingRight(): JSX.Element {
                 For the past three years, I have been fortunate enough to work on many challenging projects and be part
                 of some incredibly talented engineering teams.
             </p>
+            <button className="button default" type="button">
+                Get in touch
+            </button>
         </div>
     );
 }

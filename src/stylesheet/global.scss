@@ -53,12 +53,20 @@ code {
     --font-bold-color: #2c5197;
     --font-color: #a2a2a2;
     --button-color: #2882d8;
-    --pad-md: 10px;
+    --pad-md: 20px;
+    --margin-md: 20px;
 }
 
 .wrapper {
     margin: 50px auto;
     max-width: 1100px;
+}
+
+// ----------- MIXINS ------------ //
+@mixin button($color) {
+    color: $color;
+    border: 2px solid $color;
+    border-radius: 25px;
 }
 
 // ----------- NAVBAR ----------- //
@@ -88,9 +96,7 @@ code {
     }
 
     .button {
-        color: var(--button-color);
-        border: 2px solid var(--button-color);
-        border-radius: 25px;
+        @include button(var(--button-color));
         margin-left: 12.5px;
     }
 
@@ -108,31 +114,37 @@ code {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex: 1;
+    // flex: 1;
 }
 
 .landing-right {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
+    padding: var(--pad-md);
 
     &__header {
         font-size: 4rem;
         color: var(--logo-color);
         font-weight: 800;
-        margin-bottom: 10px;
+        margin-bottom: var(--margin-md);
     }
 
     &__text {
         color: var(--font-color);
+        margin-bottom: var(--margin-md);
+    }
+
+    .button {
+        @include button(var(--button-color));
+        width: 200px;
     }
 }
 
 .landing-image {
     float: right;
     svg {
-        width: 600px;
+        width: 550px;
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
     }
